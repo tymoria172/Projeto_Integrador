@@ -1,5 +1,7 @@
 package br.org.generation.ypora.model;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,55 +25,62 @@ public class Usuario {
 	
 	@NotNull(message = "O atributo nome é obrigatório!")
 	@Size(min = 8, max = 100, message = "O atributo nome deve conter no minimo 8 caracteres"
-			+ "e no máximo 100")
+			+ " e no máximo 100")
 	private String nome;
 	
 	@NotNull(message = "O atributo usuario é obrigatório!")
 	@Email
 	@Size(min = 11, max = 100, message = "O atributo usuario deve conter no minimo 11 caracteres"
-			+ "e no máximo 100")
+			+ " e no máximo 100")
 	private String usuario;
 	
 	@NotNull(message = "O atributo senha é obrigatório!")
 	@Size(min = 8, max = 255, message = "O atributo senha deve conter no minimo 8 caracteres"
-			+ "e no máximo 255")
+			+ " e no máximo 255")
 	private String senha;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
-	private Postagem postagem;
-	
+	private List<Postagem> postagem;
+
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getSenha() {
-		return senha;
-	}
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-	public Postagem getPostagem() {
-		return postagem;
-	}
-	public void setPostagem(Postagem postagem) {
-		this.postagem = postagem;
-	}
-	
+
 	public String getUsuario() {
 		return usuario;
 	}
+
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
 	
 }
