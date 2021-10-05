@@ -39,8 +39,18 @@ public class PostagemController {
 	}
 	
 	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<Postagem>> getByTitutlo(@PathVariable String titulo){
+	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo){
 		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
+	}
+	
+	@GetMapping("/texto/{texto}")
+	public ResponseEntity<List<Postagem>> getByTexto(@PathVariable String texto){
+		return ResponseEntity.ok(postagemRepository.findAllByTextoContainingIgnoreCase(texto));
+	}
+	
+	@GetMapping("/local/{local}")
+	public ResponseEntity<List<Postagem>> getByLocal(@PathVariable String local){
+		return ResponseEntity.ok(postagemRepository.findAllByLocalContainingIgnoreCase(local));
 	}
 	
 	@PostMapping
