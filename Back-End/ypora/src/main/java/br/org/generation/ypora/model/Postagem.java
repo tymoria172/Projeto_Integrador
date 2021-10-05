@@ -34,7 +34,7 @@ public class Postagem {
 	private String texto;
 	
 	@Size(min = 3, max = 255, message = "O atributo local deve conter no minimo 3 caracteres"
-			+ " e no máximo 255") //Rua ou Avenida 
+			+ " e no máximo 255")  
 	private String local;
 	
 	@Temporal(TemporalType.TIMESTAMP)
