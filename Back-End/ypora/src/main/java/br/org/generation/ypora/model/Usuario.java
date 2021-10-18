@@ -15,6 +15,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
@@ -28,6 +30,7 @@ public class Usuario {
 			+ " e no máximo 100")
 	private String nome;
 	
+	@ApiModelProperty(example = "email@email.com.br")
 	@NotNull(message = "O atributo usuario é obrigatório!")
 	@Email
 	@Size(min = 11, max = 100, message = "O atributo usuario deve conter no minimo 11 caracteres"

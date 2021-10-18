@@ -1,5 +1,6 @@
 package br.org.generation.ypora.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,11 @@ public class PostagemController {
 	@GetMapping("/local/{local}")
 	public ResponseEntity<List<Postagem>> getByLocal(@PathVariable String local){
 		return ResponseEntity.ok(postagemRepository.findAllByLocalContainingIgnoreCase(local));
+	}
+	
+	@GetMapping("/data/{dataInicial}/{dataFinal}")
+	public ResponseEntity<List<Postagem>> getByData(@PathVariable Date dataInicial, Date dataFinal){
+		return ResponseEntity.ok(postagemRepository.findByDataBetween(dataInicial, dataInicial));
 	}
 	
 	@PostMapping
