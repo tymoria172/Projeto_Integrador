@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/">
             <Login />
           </Route>
+          
 
           <Route path="/login">
             <Login />
@@ -34,6 +35,7 @@ function App() {
           <Route path="/sobre">
             <Sobre />
           </Route>
+          
         </div>
       </Switch>
 
