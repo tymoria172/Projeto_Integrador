@@ -4,9 +4,8 @@ interface User
 {
     id: number;
     nome: string;
-    usuario: string;
     senha: string;  
-    
+    usuario: string;
 }
 
 export default User;

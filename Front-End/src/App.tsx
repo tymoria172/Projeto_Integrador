@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Contato from "./pages/contato/Contato";
 import Sobre from "./pages/sobre/Sobre";
+import CadastroUsuario from "./pages/cadastro/CadastroUsuario";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/cadastro">
+            <CadastroUsuario />
           </Route>
 
           <Route path="/home">
