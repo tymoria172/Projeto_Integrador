@@ -5,10 +5,21 @@ import Button from "@material-ui/core/Button";
 import "./Navbar.css";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
+import {useHistory} from 'react-router-dom';
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
+import useLocalStorage from "react-use-localstorage";
 
 function Navbar() {
+  const [token, setToken] = useLocalStorage('token');
+  let history = useHistory();
+
+  function goLogout(){
+    setToken('')
+    alert('Usuário deslogado')
+    history.push('login')
+  }
+
   return (
     <div>
       <AppBar className="colorAppBar" position="static">
@@ -24,9 +35,9 @@ function Navbar() {
               <Button className="colorText">Home</Button>
             </Link>
 
-            <Link to="/login" className="text-decorator-none">
+            <Box className="text-decorator-none" onClick={goLogout}>
               <Button className="colorText">Login</Button>
-            </Link>
+            </Box>
 
             <Link to="/sobre" className="text-decorator-none">
               <Button className="colorText">Sobre</Button>
