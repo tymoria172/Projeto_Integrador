@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Contato from "./pages/contato/Contato";
 import Sobre from "./pages/sobre/Sobre";
-import CadastroUsuario from "./pages/cadastro/CadastroUsuario";
+import CadastroUsuario from "./pages/cadastroUsuario/CadastroUsuario";
 
 function App() {
   return (
