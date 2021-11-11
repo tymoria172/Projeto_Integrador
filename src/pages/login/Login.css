@@ -1,0 +1,43 @@
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.textos1 {
+    font-weight: bold !important;
+}
+
+.imagem {
+    background-image: url(https://i.imgur.com/SKJzaAA.png);
+    background-repeat: no-repet;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.margin {
+    margin: 100px;
+}
+
+.image-toplogin {
+    background-image: url('https://i.imgur.com/SBpE9RG.jpg');
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.txtH1login {
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    width: 556px;
+    height: 165px;
+    margin: 2rem 0;
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundO {
+    background-color: #E0F4FD;
+}

@@ -1,0 +1,28 @@
+.contato {
+    text-align: center;
+    width: 700px;
+    height: 400px;
+    background: #39BA9B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.image-topcontato {
+    background-image: url('https://i.imgur.com/uBGuSPG.jpg');
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.txtH1contato {
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    width: 556px;
+    height: 165px;
+    margin: 2rem 0;
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+}
