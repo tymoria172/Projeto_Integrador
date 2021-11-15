@@ -26,17 +26,16 @@
 
 .container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #0000;
     margin-top: 0px !important;
 }
 
 .font {
     color: black;
-    font-weight: 900;
+    font-weight: 100;
     font-family: "azo-sans-web", sans-serif;
+    margin-top: 10px;
 }
 
 .cor {
@@ -44,19 +43,19 @@
 }
 
 .image {
-    background-image: url("https://images.unsplash.com/photo-1534616042650-80f5c9b61f09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=724&q=80") !important;
+    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
     background-size: cover!important;
     width: 100% !important;
     height: max-content !important;
 }
 
 .image-tophome {
-    background-image: url('https://i.imgur.com/pHTjmTm.jpeg');
+    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
     background-color: white;
     background-size: cover;
     background-position: center;
+    height: 55vh;
 }
-
 .txtH1home {
     font-weight: 500;
     font-style: normal;
@@ -65,4 +64,10 @@
     height: 165px;
     margin: 2rem 0;
     margin-left: 1rem;
+}
+
+.titulo {
+    color: black;
+    font-weight: 300;
+    font-family: "azo-sans-web", sans-serif;
 }

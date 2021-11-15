@@ -9,6 +9,7 @@ import Contato from "./pages/contato/Contato";
 import Sobre from "./pages/sobre/Sobre";
 import CadastroUsuario from "./pages/cadastro/CadastroUsuario";
 
+
 function App() {
   return (
     <Router>
@@ -19,7 +20,6 @@ function App() {
           <Route exact path="/">
             <Login />
           </Route>
-          
 
           <Route path="/login">
             <Login />
@@ -40,7 +40,7 @@ function App() {
           <Route path="/sobre">
             <Sobre />
           </Route>
-          
+
         </div>
       </Switch>
 

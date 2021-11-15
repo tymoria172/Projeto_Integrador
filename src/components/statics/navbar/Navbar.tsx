@@ -31,7 +31,7 @@ function Navbar() {
               className="logo"
             />
 
-            <Link to="/home" className="text-decorator-none">
+<Link to="/home" className="text-decorator-none">
               <Button className="colorText">Home</Button>
             </Link>
 
@@ -46,6 +46,19 @@ function Navbar() {
             <Link to="/contato" className="text-decorator-none">
               <Button className="colorText">Contato</Button>
             </Link>
+
+          <Link to="/formularioTema" className="text-decorator-none">
+            <Button className="colorText">Cadastrar temas</Button>
+          </Link>
+
+
+          <Link to='/posts' className='text-decorator-none'>
+            <Button className="colorText">Postagens</Button>
+          </Link>
+
+          <Link to='/temas' className='text-decorator-none'>
+            <Button className="colorText">Temas</Button>
+          </Link>
           </Box>
 
 
