@@ -1,43 +1,39 @@
 .text-decorator-none {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 .textos1 {
     font-weight: bold !important;
+    margin-top: 10px!important;
 }
 
 .imagem {
-    background-image: url(https://i.imgur.com/SKJzaAA.png);
-    background-repeat: no-repet;
+    background-image: url(https://cdn.discordapp.com/attachments/903702693208539196/910207935714558034/PicsArt_11-16-01.42.12.jpg);
+    background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
+    margin-top: 9px;
     background-size: cover;
     background-position: center;
 }
 
-.margin {
-    margin: 100px;
+.border {
+    
+    width: 245px;
+    height: 387px;
+    left: calc(50% - 245px/2 + 210.5px);
+    top: calc(50% - 387px/2 + 0.5px);
+    margin-top: 20px!important;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
-.image-toplogin {
-    background-image: url('https://i.imgur.com/SBpE9RG.jpg');
+.image-tophome {
+    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
     background-color: white;
     background-size: cover;
     background-position: center;
-}
-
-.txtH1login {
-    font-weight: 500;
-    font-style: normal;
-    color: white;
-    width: 556px;
-    height: 165px;
-    margin: 2rem 0;
-    margin-left: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.fundO {
-    background-color: #E0F4FD;
-}
+    height: 55vh;
+  }

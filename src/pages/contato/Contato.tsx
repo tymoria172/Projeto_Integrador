@@ -1,46 +1,31 @@
-import { Button, Grid, TextField, Typography } from "@material-ui/core";
-import { Box } from "@material-ui/system";
+import { Grid, Box } from '@mui/material';
 import React from "react";
 import "./Contato.css";
 
 function Contato() {
   return (
+    <Grid container direction="column" alignContent="center">
+      <Box className="contato">
+        <Box>
+          <h1>Nome:</h1>
+          <p> email: </p>
+          <input type="Mensagem" />
+          <p>conteudo:</p>
+          <input type="Mensagem" />
+          <h2>Mensagem:</h2>
 
-    <Grid container>
-    <Grid container item className="image-topcontato" display="flex" alignItems="flex-end">
-      
-        <h1 className="txtH1home">
-          
-        </h1>
-      </Grid>
-
-      <Grid container item direction='row' justifyContent='center' alignItems='center'>
-        <Grid className='margin' alignItems='center' xs={6}>
-          <Box paddingX={20}>
-
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Fale conosco</Typography>
-
-            <TextField
-              label='email'
-              variant='outlined'
-              margin='normal'
-              fullWidth />
-
-            <TextField
-              label='mensagem'
-              margin='normal'
-              fullWidth />
-
-            <Box marginTop={2} textAlign='center'>
-
-              <Button type='submit' variant='contained' color='primary'>
-                Enviar
-              </Button>
-
-            </Box>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
+            impedit, expedita quia maiores quod nam dolor ab beatae id,
+            voluptatum veniam. Minus sit a ex pariatur. Odio nesciunt fugiat
+            dolorem!
+          </p>
+          <Box>
+            <input type="Mensagem" />
+            <button>envio</button>
           </Box>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Grid>
   );
 }

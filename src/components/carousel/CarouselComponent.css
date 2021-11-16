@@ -1,4 +1,5 @@
 .cor{
     border-radius: 10px !important;
-   
+   box-shadow: 10px;
+   background-color: white;
 }

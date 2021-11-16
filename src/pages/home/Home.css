@@ -1,73 +1,60 @@
 .titulo {
-    color: aqua;
-    text-align: center;
+  color: aqua;
+  text-align: center;
 }
 
 .imagens {
-    width: 500px;
-    height: 500px;
-    display: block;
+  width: 500px;
+  height: 500px;
+  display: block;
 }
 
 
 /*Esta afetando a página de cadastro
-   .paperhome{ background-color: #8D9CA6;  }*/
+ .paperhome{ background-color: #8D9CA6;  }*/
 
-.titulo1 {
-    font-family: "azo-sans-web", sans-serif;
-    display: flex;
-    font-size: large;
-    color: #ffff;
-    font-weight: 900;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-}
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px !important;
+
 }
 
 .font {
-    color: black;
-    font-weight: 100;
-    font-family: "azo-sans-web", sans-serif;
-    margin-top: 10px;
-}
-
-.cor {
-    background-color: whithe;
+  color: black;
+  font-weight: 350 !important;
+  font-family: 'Titillium Web', sans-serif !important;
+  margin-top: 10px;
 }
 
 .image {
-    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
-    background-size: cover!important;
-    width: 100% !important;
-    height: max-content !important;
+  background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
+  background-size: cover!important;
+  width: 100% !important;
+  height: max-content !important;
 }
 
 .image-tophome {
-    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    height: 55vh;
+  background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
 }
 .txtH1home {
-    font-weight: 500;
-    font-style: normal;
-    color: white;
-    width: 556px;
-    height: 165px;
-    margin: 2rem 0;
-    margin-left: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  width: 556px;
+  height: 165px;
+  margin: 2rem 0;
+  margin-left: 1rem;
 }
 
 .titulo {
-    color: black;
-    font-weight: 300;
-    font-family: "azo-sans-web", sans-serif;
+  color: black;
+  font-weight: 700  !important;
+  font-family: 'Titillium Web', sans-serif !important;
 }

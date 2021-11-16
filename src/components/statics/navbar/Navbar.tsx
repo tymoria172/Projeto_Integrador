@@ -3,12 +3,12 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import "./Navbar.css";
-import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
 import useLocalStorage from "react-use-localstorage";
+import { Box } from "@mui/material";
 
 function Navbar() {
   const [token, setToken] = useLocalStorage('token');
@@ -63,13 +63,6 @@ function Navbar() {
 
 
           <Box display="flex" ml="auto" alignItems="center">
-            <Box className='icon'>
-              <MenuIcon />
-            </Box>
-
-            <Box className='icon' px={3}>
-              <PersonIcon />
-            </Box>
           </Box>
         </Toolbar>
       </AppBar>

@@ -1,12 +1,20 @@
-.image-top {
-    background-image: url('https://i.imgur.com/pHTjmTm.jpeg');
+.image-top{
+    background-image: url('https://cdn.discordapp.com/attachments/903702693208539196/910208066300051467/PicsArt_11-16-01.43.03.jpg');
+    background-color: white;    
+    background-size: cover;
+    background-position: center;
+    height: 52vh;    
+    padding: 50px;
+}
+.image-tophome {
+    background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
     background-color: white;
     background-size: cover;
     background-position: center;
-    height: 85vh;
-}
+    height: 55vh;
+  }
 
-.txtH1 {
+.txtH1{
     font-weight: 500;
     font-style: normal;
     color: white;
@@ -16,15 +24,40 @@
     margin-left: 1rem;
 }
 
-.titulo {
+.titulo{
     margin: 2rem 0;
-    color: black;
+    color: #00B2FD !important;
     font-size: calc((2.8 - 1) * 1.2vw + 1rem);
-    line-height: 1.2992;
+    line-height: 1.2992;  
+   
+     
 }
 
-.about {
+.about{
     height: 420px;
     width: 260px;
     padding-right: 1rem;
+   
+    
+}
+.caixa{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box1{
+    margin: 0px !important;
+}
+.box2{
+    
+    margin-top: 10px !important;
+}
+
+.imagens1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 5px;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
 }
