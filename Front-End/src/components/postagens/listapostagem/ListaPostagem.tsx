@@ -92,7 +92,10 @@ function ListaPostagem() {
                   </Grid>
 
                   <Grid item xs={6}>                                     
-                    <img src="https://cdn.discordapp.com/attachments/903679267219578951/906232350692761620/foto_saneamento.jpg" alt="" />
+                  <Typography variant="h6">
+                    <img src={post.imagem} alt="" />
+                  </Typography>
+                    
                   </Grid>
 
                 </Grid>
