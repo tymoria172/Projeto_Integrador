@@ -70,9 +70,6 @@ function Login() {
 
     return (
         <>
-            <Box className="image-tophome" display="flex" alignItems="flex-end">
-
-            </Box>
             <Grid container direction='row' justifyContent='center' alignItems='center'>
                 <Grid xs={6}><Box paddingX={25} className='imagem '></Box></Grid>
                 <Grid alignItems='center' xs={6}>
@@ -109,17 +106,16 @@ function Login() {
 
                             </Box>
                         </form>
-                        <Box display='flex' justifyContent='center' marginTop={2}>
+                        <Box display='flex' justifyContent='center' alignItems='center' marginTop={2}>
                             <Box marginRight={1}>
-                                <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
+                                <Typography variant='subtitle1' gutterBottom align='center' noWrap>Não tem uma conta?</Typography>
                             </Box>
                             <Link to='/cadastro'>
-                                <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                                <Typography variant='subtitle1' gutterBottom align='center' className='textos1' noWrap>Cadastre-se</Typography>
                             </Link>
 
                         </Box>
                     </Box>
-
                 </Grid>
             </Grid>
         </>

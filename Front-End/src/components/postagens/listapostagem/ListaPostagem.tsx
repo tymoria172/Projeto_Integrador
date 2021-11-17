@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@mui/material';
 import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
@@ -52,38 +52,54 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-          <Box m={2} >
-            <Card variant="outlined" className="card, shadow">
-              <CardContent className="cardContent">
-                <Typography color="textSecondary" gutterBottom>
-                  Postagens
-                </Typography>                
-                <Typography variant="h5" component="h2">
-                  {post.titulo}
-                </Typography>
-
-                <Typography variant="body2" component="p">
-                  {post.texto}
-                </Typography>
-
-                <Box className="texto">
-                <Typography variant="body2" component="p">Local: </Typography>
-                <Typography variant="body2" component="p">
-                  {post.local}
-                </Typography>                
+          <Box m={2} marginTop="60px" >
+            <Card variant="outlined" className="card, shadow" >
+              <CardContent className="cardContent image-tophome">
                 
-                </Box>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <Box display="flex" flexDirection="column" marginTop="5%">
 
-                <Box className="texto">
-                <Typography variant="body2" component="p">Tema: </Typography>
-                <Typography variant="body2" component="p">
-                  {post.tema?.descricao}
-                </Typography>
-                </Box>               
-                
+                      <Box display="flex" flexDirection="column" alignItems="center">
+                        <Box>
+                          <Typography variant="h3"color="textSecondary" gutterBottom style={{fontWeight: "bold", color: "black"}}>Postagens</Typography>
+                        </Box>
+                      </Box>
+
+                      <Box display="flex" flexDirection="column">
+                        <Box>
+                          <Typography variant="h6" component="p">Titulo: </Typography>
+                          <Typography variant="body2" component="h2">{post.titulo}</Typography>
+                        </Box>
+
+                        <Box marginTop="2%">
+                          <Typography variant="h6" component="p">Texto: </Typography>
+                          <Typography variant="body2" component="p">{post.texto}</Typography>
+                        </Box>
+
+                        <Box marginTop="2%" className="texto">
+                          <Typography variant="h6" component="p">Local: </Typography>
+                          <Typography variant="body2" component="p">{post.local}</Typography>
+                        </Box>
+
+                        <Box marginTop="2%" className="texto">
+                          <Typography variant="h6" component="p">Tema: </Typography>
+                          <Typography variant="body2" component="p">{post.tema?.descricao}</Typography>
+                        </Box>
+                      </Box>
+
+                    </Box>
+                  </Grid>
+
+                  <Grid item xs={6}>                                     
+                    <img src="https://cdn.discordapp.com/attachments/903679267219578951/906232350692761620/foto_saneamento.jpg" alt="" />
+                  </Grid>
+
+                </Grid>
+
               </CardContent>
               <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
+                <Box display="flex" justifyContent="center" mb={1.5} paddingLeft="17%">
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>

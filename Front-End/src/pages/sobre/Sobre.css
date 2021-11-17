@@ -49,7 +49,8 @@
 }
 .box2{
     
-    margin-top: 10px !important;
+    margin-top: 50px !important;
+    background-color: #072667!important
 }
 
 .imagens1{
@@ -60,4 +61,35 @@
     height: 90vh;
     justify-content: center;
     align-items: center;
+}
+.avatar{
+    margin-bottom: 40px;
+   
+}
+
+.Box3{
+    background-color: #1BE3D9!important;
+    background-size: cover !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 25VH;
+    width: 100%;
+   
+
+}
+
+.Box4{
+    background-color: #1BE3D9!important;
+    background-size: cover !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 17VH;
+    width: 100%;
+    margin-top: 20px!important;
+   
+
 }

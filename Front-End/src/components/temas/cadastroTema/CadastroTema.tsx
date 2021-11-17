@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
-import { Container, Typography, TextField, Button } from '@mui/material';
+import { Container, Typography, TextField, Button, Box } from '@mui/material';
 import {useHistory, useParams } from 'react-router-dom'
 import './CadastroTema.css';
 import useLocalStorage from 'react-use-localstorage';
@@ -109,7 +109,10 @@ function CadastroTema() {
         }
   
     return (
-        <Container maxWidth="sm" className="topo">
+        <>
+        <Box className="image-tophome" display="flex" alignItems="flex-end"></Box>
+
+        <Container maxWidth="sm" className="margin">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
@@ -119,6 +122,8 @@ function CadastroTema() {
                 </Button>
             </form>
         </Container>
+        </>
+
     )
 }
 

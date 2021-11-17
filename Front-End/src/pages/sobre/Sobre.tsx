@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box, Avatar, Stack } from "@mui/material";
 import React from "react";
 import "./Sobre.css";
 
@@ -59,43 +59,23 @@ function Sobre() {
             <iframe title="vimeo-player" src="https://player.vimeo.com/video/328192920?h=d475fff31e" width="1200" height="360" frameBorder="0" allowFullScreen></iframe>
           </Box>
         </Grid>
-        <Grid item xs={12} display="flex" alignItems="center" justifyContent="center" alignContent="center">
-          <Box className="box2">
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="#00B2FD"
-              component="p"
-              align="justify"
-            >
-              Criadores
-              <br />
-              <br />
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid container xs={12} display="flex" alignItems="center" justifyContent="center" alignContent="center" spacing={2}>
-          <Grid item xs={3} className="imagens1">
-            <Box>
-              <img src="https://avatars.githubusercontent.com/u/88911837?v=4" alt="" />
-            </Box>
-          </Grid>
-          <Grid item xs={3} className="imagens1">
-            <Box>
-              <img src="https://avatars.githubusercontent.com/u/88911837?v=4" alt="" />
-            </Box>
-          </Grid>
-          <Grid item xs={3} className="imagens1">
-            <Box>
-              <img src="https://avatars.githubusercontent.com/u/88911837?v=4" alt="" />
-            </Box>
-          </Grid>
-          <Grid item xs={3} className="imagens1">
-            <Box>
-              <img src="https://avatars.githubusercontent.com/u/88911837?v=4" alt="" />
-            </Box>
-          </Grid>
-        </Grid>
+        <Box className="Box4" alignItems="center" justifyContent="center">
+          <Typography variant="h2" gutterBottom color="#F5F9FC" component="p" align="justify">
+            Criadores
+          </Typography>
+        </Box>
+        <Box className="Box3" alignItems="center" justifyContent="center">
+          <Stack direction="row" spacing={12}>
+            <a href="https://github.com/tymoria172"><Avatar alt="Andre Ricardo" src="https://avatars.githubusercontent.com/u/88911837?v=4" sx={{ width: 100, height: 100 }} /></a>
+
+            <a href="https://github.com/AllisonAlberto"><Avatar alt="Andre Ricardo" src="https://avatars.githubusercontent.com/u/82542653?v=4" sx={{ width: 100, height: 100 }} /></a>
+
+            <a href="https://github.com/Viniciusovski"><Avatar alt="Andre Ricardo" src="https://avatars.githubusercontent.com/u/55671400?v=4" sx={{ width: 100, height: 100 }} /></a>
+
+            <a href="https://github.com/pcpdomingos"><Avatar alt="Andre Ricardo" src="https://avatars.githubusercontent.com/u/88975857?v=4" sx={{ width: 100, height: 100 }} /></a>
+            
+          </Stack>
+        </Box>
       </Grid>
     </div>
   );

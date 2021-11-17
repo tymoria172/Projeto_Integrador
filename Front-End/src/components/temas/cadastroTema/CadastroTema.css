@@ -1,0 +1,11 @@
+.image-tophome {
+  background-image: url("https://cdn.discordapp.com/attachments/903702693208539196/908715115480748052/PicsArt_11-12-10.50.17.png") !important;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+}
+
+.margin {
+  margin-bottom: 150px !important;
+}

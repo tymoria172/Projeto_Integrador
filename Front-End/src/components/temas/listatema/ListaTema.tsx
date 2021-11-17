@@ -50,42 +50,43 @@ function ListaTema() {
   return (
     <>
     {
-      temas.map(tema =>(
-      <Box m={2} >
-        <Card variant="outlined">
-          <CardContent>
-            <Typography color="textSecondary" gutterBottom>
-              Tema
-            </Typography>
-            <Typography variant="h5" component="h2">
-             {tema.descricao}
-            </Typography>
-            <Typography variant="h5" component="h2">
-             {tema.nome}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5} >
+      temas.map(tema => (
+        <Box mx={2}>
+          <Card variant="outlined" className='margin colorsombra'>
+            <CardContent className='colorcard'>
+              <Typography color="textSecondary" gutterBottom>
+                Tema
+              </Typography>
+              <Typography variant="h5" component="h2">
+                {tema.nome}
+              </Typography>
+              <Typography variant="h5" component="h2">
+                {tema.descricao}
+              </Typography>              
+            </CardContent>
+            <CardActions className='colorcadbase'>
+              <Box display="flex" justifyContent="center" mb={1.5} >
 
-              <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
-                </Box>
-              </Link>
-              <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
-                </Box>
-              </Link>
-            </Box>
-          </CardActions>
-        </Card>
-      </Box>
+                <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
+                  <Box mx={1}>
+                    <Button variant="contained" className="marginLeft" size='small' color='primary'>
+                      atualizar
+                    </Button>
+                  </Box>
+                </Link>
+                <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
+                  <Box mx={1}>
+                    <Button variant="contained" size='small' color='secondary'>
+                      deletar
+                    </Button>
+                  </Box>
+                </Link>
+              </Box>
+            </CardActions>
+          </Card>
+        </Box>
       ))
+
       }
     </>
   );

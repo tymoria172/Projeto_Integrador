@@ -1,10 +1,11 @@
-import { Grid, Box } from '@mui/material';
 import React, { useEffect } from "react";
 import "./Contato.css";
 import { useHistory } from "react-router";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import { Grid, Box, Typography, Button, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Contato() {
   let history = useHistory();
@@ -30,30 +31,27 @@ function Contato() {
   }, [token])
 
   return (
+    <>
+    <Box className="image-tophome" display="flex" alignItems="flex-end">
+    </Box>
     <Grid container direction="column" alignContent="center">
       <Box className="contato">
-        <Box>
-          <h1>Nome:</h1>
-          <p> email: </p>
-          <input type="Mensagem" />
-          <p>conteudo:</p>
-          <input type="Mensagem" />
-          <h2>Mensagem:</h2>
-
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-            impedit, expedita quia maiores quod nam dolor ab beatae id,
-            voluptatum veniam. Minus sit a ex pariatur. Odio nesciunt fugiat
-            dolorem!
-          </p>
-          <Box>
-            <input type="Mensagem" />
-            <button>envio</button>
+        <form >
+          <Typography variant='h4' gutterBottom color='textPrimary' component='h3' align='center' className="titulo"> Contate-nos </Typography>
+          <TextField label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
+          <TextField label='Email' variant='outlined' name='usuario' margin='normal' fullWidth />
+          <TextField label='Mensagem' variant='outlined' name='senha' margin='normal' fullWidth />
+          
+          <Box marginTop={2} textAlign='center'>
+            <Button type='submit' variant='contained' color='primary'>
+              Enviar
+            </Button>
           </Box>
-        </Box>
+        </form>
       </Box>
     </Grid>
-  );
+    </>
+);
 }
 
 export default Contato;
