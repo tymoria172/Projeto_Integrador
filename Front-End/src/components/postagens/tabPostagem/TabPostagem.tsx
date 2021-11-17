@@ -19,7 +19,7 @@ function TabPostagem() {
           </Tabs>
         </AppBar>
         <TabPanel value="1" className="cor">
-          <Box display="flex" flexWrap="wrap" justifyContent="center" className="cor">
+          <Box display="flex" flexWrap="wrap" justifyContent="center" flexDirection="column" className="cor">
             <ListaPostagem />
           </Box>
         </TabPanel>
