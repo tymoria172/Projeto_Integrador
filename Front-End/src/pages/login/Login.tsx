@@ -1,16 +1,19 @@
 import { Button, Grid, TextField, Typography, Box } from '@mui/material';
 import React, { ChangeEvent, useState, useEffect } from 'react';
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
 import { Link, useHistory } from 'react-router-dom';
 import Userlogin from '../../models/UserLogin';
 import { api } from '../../services/Service';
 import './Login.css';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 function Login() {
 
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState("");    
 
     const [userLogin, setUserLogin] = useState<Userlogin>(
         {
@@ -30,26 +33,40 @@ function Login() {
     }
 
     useEffect(() => {
-        if (token != '') {
-            history.push('/home')
+        if (token != "") {
+          dispatch(addToken(token));
+          history.push("/home");
         }
+      }, [token]);
 
-    }, [token])
-
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+      async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-
         try {
-
-            await login(`/usuarios/logar`, userLogin, setToken)
-
-
-            alert('Usuario logado com sucesso!');
-
-        } catch (error) {
-            alert('dados do usuario inconsistentes!!!')
+          await login(`/usuarios/logar`, userLogin, setToken);      
+          toast.success('Usuário logado com sucesso!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+          
+        } catch (error) {      
+          toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
         }
-    }
+      }
 
     return (
         <>
@@ -96,7 +113,7 @@ function Login() {
                             <Box marginRight={1}>
                                 <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                             </Box>
-                            <Link to='/cadastrousuario'>
+                            <Link to='/cadastro'>
                                 <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
                             </Link>
 

@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { Box, Container, Paper, Button, Typography, Grid } from '@mui/material';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
+
 
 function Home() {
+    let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
+    useEffect(() => {
+      if (token == "") {
+        toast.error('Você precisa estar logado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+          history.push("/login")
+  
+      }
+  }, [token])
+
     return (
         <>
             <Box className="image-tophome" display="flex" alignItems="flex-end">

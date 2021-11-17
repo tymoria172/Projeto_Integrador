@@ -1,8 +1,34 @@
 import { Grid, Box } from '@mui/material';
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contato.css";
+import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function Contato() {
+  let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
+    useEffect(() => {
+      if (token == "") {
+        toast.error('Você precisa estar logado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+          history.push("/login")
+  
+      }
+  }, [token])
+
   return (
     <Grid container direction="column" alignContent="center">
       <Box className="contato">
