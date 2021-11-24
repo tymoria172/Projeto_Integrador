@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@mui/material';
 import './ListaPostagem.css';
-import useLocalStorage from 'react-use-localstorage';
+
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service'
 import { useSelector } from 'react-redux';
@@ -11,7 +11,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 function ListaPostagem() {
-  const [posts, setPosts] = useState<Postagem[]>([])  
+  const [posts, setPosts] = useState<Postagem[]>([])
   let history = useHistory();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -28,7 +28,7 @@ function ListaPostagem() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    });
+      });
       history.push("/login")
 
     }
@@ -53,24 +53,29 @@ function ListaPostagem() {
       {
         posts.map(post => (
           <Box m={2} marginTop="60px" >
-            <Card variant="outlined" className="card, shadow" >
-              <CardContent className="cardContent image-tophome">
-                
-                <Grid container>
-                  <Grid item xs={6}>
-                    <Box display="flex" flexDirection="column" marginTop="5%">
+            <Card variant="outlined" className="shadow" >
 
+
+              <Grid container>
+                <Grid item xs={12} >
+                  <Box display="flex" flexDirection="column">
+                    <CardActions className='colorcard'>
                       <Box display="flex" flexDirection="column" alignItems="center">
-                        <Box>
-                          <Typography variant="h3"color="textSecondary" gutterBottom style={{fontWeight: "bold", color: "black"}}>Postagens</Typography>
-                        </Box>
-                      </Box>
 
-                      <Box display="flex" flexDirection="column">
+                        <Box>
+                          <Typography variant="h3" color="textSecondary" gutterBottom style={{ color: "black" }}>Postagens</Typography>
+                        </Box>
+
+                      </Box>
+                    </CardActions>
+
+                    <Box display="flex" flexDirection="column">
+                      <CardContent>
                         <Box>
                           <Typography variant="h6" component="p">Titulo: </Typography>
                           <Typography variant="body2" component="h2">{post.titulo}</Typography>
                         </Box>
+
 
                         <Box marginTop="2%">
                           <Typography variant="h6" component="p">Texto: </Typography>
@@ -86,22 +91,22 @@ function ListaPostagem() {
                           <Typography variant="h6" component="p">Tema: </Typography>
                           <Typography variant="body2" component="p">{post.tema?.descricao}</Typography>
                         </Box>
-                      </Box>
-
+                      </CardContent>
                     </Box>
-                  </Grid>
+                  </Box>
+                </Grid>
 
-                  <Grid item xs={6}>                                     
+                <Grid item xs={6}>
                   <Typography variant="h6">
                     <img src={post.imagem} alt="" />
                   </Typography>
-                    
-                  </Grid>
 
                 </Grid>
 
-              </CardContent>
-              <CardActions>
+              </Grid>
+
+
+              <CardActions className='colorcard'>
                 <Box display="flex" justifyContent="center" mb={1.5} paddingLeft="17%">
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >

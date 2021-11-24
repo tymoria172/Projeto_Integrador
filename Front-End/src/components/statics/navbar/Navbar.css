@@ -1,16 +1,6 @@
-.titulo {
-    text-align: center;
-}
-
 .colorAppBar {
-    background-color: transparent!important;
+    background-color: #072667!important;
     box-shadow: none !important;
-    
-}
-
-.colorText {
-    color: #8DD8F8 !important;
-    font-weight: bold !important;
 }
 
 .text-decorator-none {
@@ -23,7 +13,7 @@
     padding-top: 3px;
 }
 
-.icon {
-    justify-content: center;
+.colorText {
     color: #8DD8F8 !important;
+    font-weight: bold !important;
 }

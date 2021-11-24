@@ -21,3 +21,48 @@
   margin-top: 10px;
   background: #1be3d9;
 }
+
+.Box3{
+  background-color: #ffffff!important;
+  background-size: cover !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  height: 150VH !important;
+  width: 100% !important;
+}
+
+.grid1{
+
+  display: flex!important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+
+}
+.icones{
+ width: 50px;
+ height: 50px;
+ margin: 10px!important;
+}
+.card{
+  margin: 10px!important;
+}
+
+.titulo5{
+ 
+  background-size: cover !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 17VH;
+  width: 100%;
+  margin-top: 30px!important;
+ 
+}
+
+.containercards{
+  margin-bottom: 50px!important;
+}
