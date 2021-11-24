@@ -50,26 +50,23 @@ function ListaTema() {
     <>
       {
         temas.map(tema => (
-          <Box m={2} marginTop="60px" >
-            <Card variant="outlined" className="shadow" >
+          <Box m={2} marginTop="100px">
+            <Card variant="outlined"  >
 
 
-              <Grid container>
-                <Grid item xs={12}>
-                  <Box display="flex" flexDirection="column" alignItems="center">
+              <Grid container >
+                <Grid item xs={12} >
+                  <Box display="flex" flexDirection="column">
 
                     <CardActions className='colorcard'>
                       <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography color="textSecondary" gutterBottom>
-                          Tema
+                        <Typography variant="h5" color="textSecondary" gutterBottom style={{ color: "black" }}>
+                          {tema.nome}
                         </Typography>
                       </Box>
                     </CardActions>
 
-                    <CardActions className='colorcadbase'>
-                      <Typography variant="h5" component="h2">
-                        {tema.nome}
-                      </Typography>
+                    <CardActions className='tamanho'>
                       <Typography variant="h5" component="h2">
                         {tema.descricao}
                       </Typography>

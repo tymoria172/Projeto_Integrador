@@ -1,11 +1,14 @@
-.margin {
-    margin-block-end: 70px;
-    margin-block-start: 70px;
-}
-
 .alinhamentotema {
     align-items: center!important;
     justify-content: center!important;
+}
+
+.backgroundTema {
+    background-image: url('https://isano.eu/shop-eu/shop-eu/images/Blog/Wasser.JPG');
+}
+
+.tamanho {
+    height: 100px;
 }
 
 .colorcard {
@@ -13,7 +16,7 @@
 }
 
 .colorcadbase {
-    background-color: white!important;
+    background-color: blue!important;
 }
 
 .colorbutton {

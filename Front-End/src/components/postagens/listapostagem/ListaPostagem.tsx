@@ -52,8 +52,8 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-          <Box m={2} marginTop="60px" >
-            <Card variant="outlined" className="shadow" >
+          <Box m={2} marginTop="100px" >
+            <Card variant="outlined">
 
 
               <Grid container>
@@ -62,8 +62,8 @@ function ListaPostagem() {
                     <CardActions className='colorcard'>
                       <Box display="flex" flexDirection="column" alignItems="center">
 
-                        <Box>
-                          <Typography variant="h3" color="textSecondary" gutterBottom style={{ color: "black" }}>Postagens</Typography>
+                      <Box>
+                          <Typography variant="h5" color="textSecondary" gutterBottom style={{ color: "black" }}>{post.titulo}</Typography>
                         </Box>
 
                       </Box>
@@ -71,10 +71,7 @@ function ListaPostagem() {
 
                     <Box display="flex" flexDirection="column">
                       <CardContent>
-                        <Box>
-                          <Typography variant="h6" component="p">Titulo: </Typography>
-                          <Typography variant="body2" component="h2">{post.titulo}</Typography>
-                        </Box>
+
 
 
                         <Box marginTop="2%">
