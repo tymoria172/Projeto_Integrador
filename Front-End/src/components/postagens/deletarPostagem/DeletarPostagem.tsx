@@ -72,7 +72,7 @@ function DeletarPostagem() {
           }
   return (
     <>
-      <Box m={2}>
+      <Box m={2} paddingTop={10}>
         <Card variant="outlined" >
           <CardContent>
             <Box justifyContent="center">

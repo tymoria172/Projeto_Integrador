@@ -1,10 +1,7 @@
-import Tema from './Tema'
-
-interface Postagem{
+interface Tema{
     id: number;
     nome: string;
-    descricao: string;
-    tema?: Tema| null
+    descricao: string;   
 }
 
-export default Postagem;
+export default Tema;

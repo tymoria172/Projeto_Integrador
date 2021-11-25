@@ -146,26 +146,29 @@ function CadastroPost() {
                <TextField value={postagem.local} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="local" label="Local" name="local" variant="outlined" margin="normal" fullWidth />
 
                <FormControl >
-                   <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
-                   <Select
-                       labelId="demo-simple-select-helper-label"
-                       id="demo-simple-select-helper"
-                       onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
-                           headers: {
-                               'Authorization': token
-                           }
-                       })}>
-                       {
-                           temas.map(tema => (
-                               <MenuItem value={tema.id}>{tema.nome}</MenuItem>
-                           ))
-                       }
-                   </Select>
-                   <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                   <Button type="submit" variant="contained" color="primary">
-                       Finalizar
-                   </Button>
-               </FormControl>
+                    <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+                    <Select
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"                        
+                        onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
+                            headers: {
+                                'Authorization': token
+                            }
+                        })}>
+                        {
+                            temas.map(tema => (                                
+                                <MenuItem key={ tema.id } value={ tema.id }
+                                style={{display: "flex", flexDirection:"column"}}>
+                                    { tema.nome }
+                                </MenuItem>
+                            ))
+                        }
+                    </Select>
+                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+                    <Button type="submit" variant="contained" color="primary">
+                        Finalizar
+                    </Button>
+                </FormControl>
            </form>
        </Container>
        </>
