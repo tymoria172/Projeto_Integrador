@@ -86,7 +86,7 @@ function ListaPostagem() {
 
                         <Box marginTop="2%" className="texto">
                           <Typography variant="h6" component="p">Tema: </Typography>
-                          <Typography variant="body2" component="p">{post.tema?.descricao}</Typography>
+                          <Typography variant="body2" component="p">{post.tema?.nome}</Typography>
                         </Box>
                       </CardContent>
                     </Box>
