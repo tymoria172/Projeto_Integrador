@@ -43,7 +43,7 @@ A camada de serviço são criadas para processar a lógica de negócio.
 #### Repositories
 Trata-se da persistência dos dados. As lógicas se limitam às próprias necessidades. Aqui os dados são recebidos, persistidos ou retornados.
 
-#### security
+#### Security
 Envolve toda a parte de segurança do projeto. (endpoints públicos, privados, etc.)
 
 ## Validações e segurança
