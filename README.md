@@ -5,22 +5,20 @@
 <h2>Sobre</h2>
 O projeto tem como principal foco informar dicas de melhoria e possibilitar denuncias relacionadas ao Saneamento Básico.
 
-<h2>Linguagens utilizadas</h2>
+<h2>Tecnologias utilizadas</h2>
 
+<h3>Back-End</h3>
 <ul>
 <li>Java</li>
-<li>SQL</li>
-<li>TypeScript</li>
-<li>HTML</li>
-<li>CSS</li>
-  
-<h2>Tecnologias utilizadas</h2>
-<li>Spring Boot</li>
-<li>Spring Security</li>
-<li>Node Js</li>
-<li>React Js</li>
+<li>Spring</li>
+<li>MySQL</li>
 <li>Heroku</li>
-<li>Swagger Ui</li>
+  
+<h3>Front-End</h3>
+<li>Node Js</li>
+<li>React</li>
+<li>TypeScript</li>
+<li>HTML/CSS</li>
  
 </ul>
 
