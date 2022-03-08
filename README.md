@@ -13,7 +13,6 @@ O projeto tem como principal foco informar dicas de melhoria e possibilitar denu
 <li>Spring</li>
 <li>MySQL</li>
 <li>Heroku</li>
-  
 <h3>Front-End</h3>
 <li>Node Js</li>
 <li>React</li>
